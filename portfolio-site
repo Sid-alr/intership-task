@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Siddhi Kumar | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #212529;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    section {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: "✔️";
+      margin-right: 0.5rem;
+      color: #28a745;
+    }
+
+    .projects img {
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #212529;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Siddhi Kumar</h1>
+    <p>Student | CS Branch, NIET</p>
+  </header>
+
+  <div class="container">
+
+    <!-- About -->
+    <section>
+      <h2>About Me</h2>
+      <p>Hi! I'm Siddhi Kumar, a Computer Science student at NIET. I'm passionate about web development, building real-world projects, and constantly learning new technologies to improve my skills.</p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Calculator</strong> – A basic calculator using HTML, CSS, and JavaScript.<br>
+          <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+        </li>
+        <br>
+        <li>
+          <strong>Portfolio Website</strong> – A simple and clean personal portfolio to showcase my work.<br>
+          <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+        </li>
+        <br>
+        <li>
+          <strong>Landing Page</strong> – A responsive landing page design for a fictional product.<br>
+          <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Resume -->
+    <section>
+      <h2>Resume</h2>
+      <p><a href="resume.pdf" download>Download My Resume (PDF)</a></p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Contact</h2>
+      <p>Email: siddhikumar@example.com</p>
+      <p>Phone: +91-9876543210</p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Siddhi Kumar. All rights reserved.
+  </footer>
+
+</body>
+</html>
