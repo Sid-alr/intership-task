@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JobBoard - Find Your Dream Job</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f4f4f4; color: #333; }
+    header, footer { background: #222; color: white; padding: 15px; text-align: center; }
+    nav { display: flex; justify-content: center; gap: 20px; background: #333; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; padding: 5px 10px; }
+    section { padding: 20px; }
+    .featured-jobs, .job-listings, .dashboards, .application-form, .search-bar { margin: 30px auto; max-width: 900px; }
+    .job-card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 0 5px #ccc; }
+    .job-card h3 { margin-bottom: 5px; }
+    .job-card button { margin-top: 10px; padding: 5px 10px; }
+    .search-bar input { width: 100%; padding: 10px; margin-top: 10px; font-size: 16px; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 15px; }
+    form button { padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer; }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; align-items: center; }
+      .job-card { padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>JobBoard</h1>
+  <p>Find Your Dream Job or Hire the Best Talent</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#jobs">Jobs</a>
+  <a href="#apply">Apply</a>
+  <a href="#dashboards">Dashboards</a>
+</nav>
+
+<section id="home">
+  <div class="featured-jobs">
+    <h2>Featured Jobs</h2>
+    <div class="job-card">
+      <h3>Frontend Developer</h3>
+      <p>Company: CodeTech</p>
+      <p>Location: Remote</p>
+      <button onclick="showJobDetail('Frontend Developer')">View Details</button>
+    </div>
+    <div class="job-card">
+      <h3>Backend Engineer</h3>
+      <p>Company: DevBase</p>
+      <p>Location: Bangalore</p>
+      <button onclick="showJobDetail('Backend Engineer')">View Details</button>
+    </div>
+  </div>
+</section>
+
+<section id="search" class="search-bar">
+  <h2>Search Jobs</h2>
+  <input type="text" id="searchInput" placeholder="Search by job title or company..." onkeyup="filterJobs()" />
+</section>
+
+<section id="jobs" class="job-listings">
+  <h2>All Job Listings</h2>
+  <div id="jobResults">
+    <div class="job-card">
+      <h3>UI/UX Designer</h3>
+      <p>Company: PixelPro</p>
+      <p>Location: Delhi</p>
+      <button onclick="showJobDetail('UI/UX Designer')">View Details</button>
+    </div>
+    <div class="job-card">
+      <h3>Full Stack Developer</h3>
+      <p>Company: InnovateX</p>
+      <p>Location: Mumbai</p>
+      <button onclick="showJobDetail('Full Stack Developer')">View Details</button>
+    </div>
+  </div>
+</section>
+
+<section id="apply" class="application-form">
+  <h2>Apply for a Job</h2>
+  <form onsubmit="sendApplication(event)">
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email" required />
+    <input type="text" placeholder="Job Title" required />
+    <input type="file" accept=".pdf" required />
+    <textarea rows="5" placeholder="Write a short message..."></textarea>
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
+
+<section id="dashboards" class="dashboards">
+  <h2>Dashboards</h2>
+  <div class="job-card">
+    <h3>Employer Dashboard (Simulated)</h3>
+    <p>Post new jobs, manage applicants, and update listings.</p>
+  </div>
+  <div class="job-card">
+    <h3>Candidate Dashboard (Simulated)</h3>
+    <p>Update your profile, track job applications, and manage resume.</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 JobBoard. All rights reserved.</p>
+</footer>
+
+<script>
+  function showJobDetail(title) {
+    alert("Job Details for " + title + ":\n\n- Description: Lorem ipsum dolor sit amet.\n- Requirements: Basic experience.\n- Salary: ₹5–10 LPA\n\nClick Apply section to apply.");
+  }
+
+  function sendApplication(e) {
+    e.preventDefault();
+    alert("✅ Application submitted successfully!\n📧 Email confirmation has been sent.");
+  }
+
+  function filterJobs() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const jobs = document.querySelectorAll("#jobResults .job-card");
+    jobs.forEach(job => {
+      const title = job.querySelector("h3").innerText.toLowerCase();
+      const company = job.querySelector("p").innerText.toLowerCase();
+      job.style.display = title.includes(input) || company.includes(input) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
